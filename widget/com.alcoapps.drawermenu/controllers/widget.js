@@ -63,6 +63,10 @@ var addEventListener=function(listenerName, listenerFunction){
 	};
 };
 
+var isMenuOpen = function(){
+	return menuOpen;
+};
+
 Ti.Gesture.addEventListener('orientationchange', function(e) {
     var newWidth;
     newWidth = Ti.Platform.displayCaps.platformWidth;
@@ -73,7 +77,7 @@ Ti.Gesture.addEventListener('orientationchange', function(e) {
 
 exports.init=init;
 exports.showhidemenu=showhidemenu;
-exports.menuOpen=menuOpen;
+exports.isMenuOpen=isMenuOpen;
 exports.addEventListener=addEventListener;
 exports.setDuration=function(dur){
 	duration = dur;
